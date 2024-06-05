@@ -10,11 +10,10 @@ function About() {
         </div>
         <ImageAvatar />
       </div> */}
-      <ImageAvatar />
       <h2 className="mb-4 font-Chakra-Bold text-6xl font-bold text-bluish-gray">
         William silva
       </h2>
-      <p className="font-Chakra-Regular text-2xl text-zinc-300">
+      <p className="text-justify font-Chakra-Regular text-2xl text-zinc-300">
         Olá, sou um desenvolvedor frontend com experiência em criar interfaces
         de usuário atraentes e funcionais.
         <br /> Tenho paixão por aprender novas tecnologias e aprimorar minhas

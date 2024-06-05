@@ -20,7 +20,7 @@ export function Footer() {
           </span>
         </div>
 
-        <div className="flex flex-row items-center justify-between gap-8">
+        <div className="flex items-center justify-between md:grid md:grid-cols-2 md:gap-2  lg:flex-row lg:gap-8 xl:flex-row xl:gap-8">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Inicio
           </span>

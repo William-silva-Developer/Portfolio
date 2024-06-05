@@ -1,16 +1,17 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { CarouselSpacing } from "./Custom-Carousel";
+import { ImageAvatar } from "./Avatar";
 
 function Hero() {
   return (
-    <main className="mb-32 mt-32 flex h-96 flex-row">
+    <main className="mb-32 mt-32 flex h-96 sm:flex-col md:flex-col md:gap-8 xl:flex-row">
       <div className="flex w-full items-center justify-center">
-        <div>
-          <span className=" text-left font-serif text-lg font-bold text-custom-red">
+        <div className="flex flex-col">
+          <span className=" text-left font-serif text-lg font-bold text-custom-red  md:text-xl">
             Desenvolvedor Frontend
           </span>
-          <h1 className="text- font-Chakra-Bold text-6xl text-bluish-gray">
+          <h1 className="text- font-Chakra-Bold text-6xl text-bluish-gray md:text-5xl">
             Estou Pronto para dá Vida a sua Grande Nova ideia
           </h1>
 
@@ -21,7 +22,7 @@ function Hero() {
       </div>
       {/* Parte do slide */}
       <div className="flex w-full items-center justify-center pb-32">
-        <CarouselSpacing />
+        <ImageAvatar />
       </div>
     </main>
   );

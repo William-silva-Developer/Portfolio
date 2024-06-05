@@ -45,7 +45,7 @@ function Projects() {
         {projects.map((project, index) => (
           <Card
             key={index}
-            className=" flex h-[432px]  border-none bg-transparent"
+            className=" flex h-[432px] border-none  bg-transparent md:h-[300px]"
           >
             <div className="flex w-full flex-col justify-center  border-t-2 px-2  text-left">
               <h2 className="font-Chakra-Bold text-2xl text-bluish-gray ">
@@ -78,7 +78,7 @@ function Projects() {
                 <ChevronRight color="#ffffff" size={28} />
               </Button>
             </div>
-            <div className="flex w-full items-center justify-center border-t-2 pt-4">
+            <div className="flex w-full items-center justify-center border-t-2 pt-4 md:h-[90%] md:w-[60%]">
               <Image
                 alt="Imagem do projeto"
                 src={foto}

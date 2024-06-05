@@ -34,7 +34,7 @@ function Header() {
             William
           </span>
         </div>
-        <div className="flex flex-row items-center justify-between gap-8">
+        <div className="flex items-center justify-between  gap-8  md:flex-row lg:flex-row xl:flex-row">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Inicio
           </span>
