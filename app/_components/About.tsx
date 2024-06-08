@@ -4,16 +4,10 @@ import { ImageAvatar } from "./Avatar";
 function About() {
   return (
     <section id="about" className=" flex flex-col items-center gap-6 pt-20">
-      {/* <div className="flex h-full flex-row items-center gap-16">
-        <div className="flex h-full items-center justify-center text-justify">
-          
-        </div>
-        <ImageAvatar />
-      </div> */}
-      <h2 className="mb-4  font-Chakra-Bold text-6xl font-bold text-bluish-gray">
+      <h2 className="mb-4  font-Chakra-Bold text-4xl font-bold text-bluish-gray sm:text-5xl md:text-6xl">
         William silva
       </h2>
-      <p className="text-justify font-Chakra-Regular text-2xl text-zinc-300">
+      <p className="text-justify font-Chakra-Regular text-xl text-zinc-300 sm:text-2xl">
         Olá, sou um desenvolvedor frontend com experiência em criar interfaces
         de usuário atraentes e funcionais.
         <br /> Tenho paixão por aprender novas tecnologias e aprimorar minhas

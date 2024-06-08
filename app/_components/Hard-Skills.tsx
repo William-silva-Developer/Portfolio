@@ -68,11 +68,11 @@ function HardSkills() {
   return (
     <section className="mt-32 w-full  pt-4">
       <div className="fle-row flex items-center justify-center ">
-        <h2 className="mb-3 font-serif text-5xl text-bluish-gray ">
+        <h2 className="mb-3 font-serif text-5xl text-bluish-gray md:text-6xl">
           Habilidades
         </h2>
       </div>
-      <div className="mt-12  grid place-items-center justify-center gap-4 sm:mx-1 sm:grid-cols-2 sm:justify-between  md:grid-cols-2 lg:mx-1.5 lg:grid-cols-3">
+      <div className="mt-12  grid place-items-center justify-center gap-4 sm:mx-1 sm:grid-cols-2 sm:justify-between  md:grid-cols-2 lg:mx-1.5 lg:grid-cols-3 xl:grid-cols-4">
         {ArraySkills.map((item) => (
           <CustomCardSkills
             alt={item.alt}
