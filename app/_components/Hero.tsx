@@ -2,10 +2,11 @@ import React from "react";
 import { Button } from "./ui/button";
 import { CarouselSpacing } from "./Custom-Carousel";
 import { ImageAvatar } from "./Avatar";
-
+import Image from "next/image";
+import Foto from "@/public/avatar.png";
 function Hero() {
   return (
-    <main className="mb-32 mt-32 flex h-96 sm:flex-col md:flex-col md:gap-8 xl:flex-row">
+    <main className="mb-32  mt-32 flex h-96 flex-col sm:flex-col md:flex-col md:gap-8 lg:flex-col xl:flex-row">
       <div className="flex w-full items-center justify-center">
         <div className="flex flex-col">
           <span className=" text-left font-serif text-lg font-bold text-custom-red  md:text-xl">
@@ -21,8 +22,10 @@ function Hero() {
         </div>
       </div>
       {/* Parte do slide */}
-      <div className="flex w-full items-center justify-center pb-32">
-        <ImageAvatar />
+      <div className="flex h-[80%] w-full items-center justify-center">
+        <div className="flex h-[100%] w-auto pt-10 sm:pt-10 ">
+          <ImageAvatar />
+        </div>
       </div>
     </main>
   );

@@ -72,7 +72,7 @@ function HardSkills() {
           Habilidades
         </h2>
       </div>
-      <div className="mt-12  grid place-items-center justify-between gap-4 md:grid-cols-2 lg:grid-cols-4 ">
+      <div className="mt-12  grid place-items-center justify-center gap-4 sm:mx-1 sm:grid-cols-2 sm:justify-between  md:grid-cols-2 lg:mx-1.5 lg:grid-cols-3">
         {ArraySkills.map((item) => (
           <CustomCardSkills
             alt={item.alt}
