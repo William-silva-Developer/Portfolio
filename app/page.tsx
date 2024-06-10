@@ -12,12 +12,14 @@ import { Header } from "./_components/header";
 function Home() {
   return (
     <>
-      <div className="mb-24">
+      <div className="px-10">
         <Header />
+        <Hero />
+        <About />
+        <HardSkills />
+        <Projects />
       </div>
-      <Hero />
-      <About />
-      <HardSkills />
+      <Footer />
     </>
   );
 }

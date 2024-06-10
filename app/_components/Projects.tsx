@@ -37,58 +37,62 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="mt-32 w-full  pt-4">
-      <div className="fle-row flex items-center justify-center ">
-        <h2 className="mb-3 font-serif text-5xl text-bluish-gray ">Projetos</h2>
-      </div>
-      <div className="grid grid-cols-1 gap-4">
-        {projects.map((project, index) => (
-          <Card
-            key={index}
-            className=" flex h-[432px] flex-row  justify-between  border-none bg-slate-800 md:h-[300px]"
-          >
-            <div className="flex w-full flex-col justify-center  border-t-2 px-2  text-left">
-              <h2 className="font-Chakra-Bold text-2xl text-bluish-gray ">
-                {project.title}
-              </h2>
-              <span className="font-Chakra-Regular text-lg text-zinc-400">
-                {project.description}
-              </span>
-              {/* {project.tags.map((tag) =>(<div>{tag}</div>))} */}
-              <div className="gap- mt-2 flex flex-row gap-2">
-                <div className="rounded-lg bg-zinc-200 px-2 ">
-                  <span className="text-sm">Typescript</span>
-                </div>
-                <div className="rounded-lg bg-zinc-200 px-2 ">
-                  <span className="text-sm">Javascript</span>
-                </div>
-                <div className="rounded-lg bg-zinc-200 px-2 ">
-                  <span className="text-sm">React</span>
-                </div>
-                <div className="rounded-lg bg-zinc-200 px-2 ">
-                  <span className="text-sm">Nextjs</span>
-                </div>
-              </div>
+    <section id="projects" className="mt-32 flex flex-col items-center gap-4">
+      <h2 className="mb-10 font-Chakra-SemiBold text-5xl text-bluish-gray">
+        Projetos
+      </h2>
 
-              <Button
-                onClick={() => alert("Clicou")}
-                className="mt-4 w-48 rounded-lg  bg-transparent text-cyan-400 hover:bg-slate-900 "
-              >
-                Visualizar projeto
-                <ChevronRight color="#ffffff" size={28} />
-              </Button>
+      {projects.map((project, index) => (
+        <Card
+          key={index}
+          className=" flex flex-col-reverse overflow-hidden bg-transparent sm:min-h-[200px] sm:min-w-full sm:flex-row md:min-h-[260px]"
+        >
+          {/*DIV DA DESCRIÇÃO DO PROJETO */}
+          <div className="flex w-full flex-col justify-center px-4 pt-2 text-left">
+            <h2 className="font-Chakra-Bold text-4xl text-bluish-gray ">
+              {project?.title}
+            </h2>
+            <span className="font-Chakra-Regular text-2xl text-zinc-400">
+              {project?.description}
+            </span>
+            {/* {project.tags.map((tag) =>(<div>{tag}</div>))} */}
+            <div className="gap- mt-2 flex flex-row gap-2">
+              <div className="cursor-default rounded-lg border-2 bg-zinc-200 px-2 transition-colors duration-500 hover:border-2  hover:bg-zinc-400">
+                <span className="text-md  font-Chakra-Regular">Typescript</span>
+              </div>
+              <div className="cursor-default rounded-lg border-2 bg-zinc-200 px-2 transition-colors duration-500 hover:border-2  hover:bg-zinc-400">
+                <span className="text-md  font-Chakra-Regular">Javascript</span>
+              </div>
+              <div className="cursor-default rounded-lg border-2 bg-zinc-200 px-2 transition-colors duration-500 hover:border-2  hover:bg-zinc-400">
+                <span className="text-md  font-Chakra-Regular">React</span>
+              </div>
+              <div className="cursor-default rounded-lg border-2 bg-zinc-200 px-2 transition-colors duration-500 hover:border-2  hover:bg-zinc-400">
+                <span className="text-md  font-Chakra-Regular">Nextjs</span>
+              </div>
             </div>
-            <div className="flex max-h-full  w-full border-t-2 pb-4  pt-4 md:w-[60%]">
+
+            <Button
+              onClick={() => alert("Clicou")}
+              className="mt-4 w-48 rounded-lg  bg-transparent text-cyan-400 hover:bg-slate-900 "
+            >
+              Visualizar projeto
+              <ChevronRight color="#ffffff" size={28} />
+            </Button>
+          </div>
+          {/*DIV DA IMAGEM */}
+          <div className="flex min-h-full w-full bg-slate-200 ">
+            <div className=" flex h-full w-full object-cover">
               <Image
                 alt="Imagem do projeto"
                 layout="responsive"
+                sizes="100%"
                 src={foto}
                 quality={100}
               />
             </div>
-          </Card>
-        ))}
-      </div>
+          </div>
+        </Card>
+      ))}
     </section>
   );
 }

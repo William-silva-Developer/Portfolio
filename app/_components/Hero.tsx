@@ -6,7 +6,7 @@ import Image from "next/image";
 import Foto from "@/public/avatar.png";
 function Hero() {
   return (
-    <main className="m-h-96  flex flex-col gap-10 sm:flex-row">
+    <main className="m-h-96  flex flex-col gap-10 pt-32 sm:flex-row">
       <div className="flex w-full items-center justify-center">
         <div className="flex flex-col">
           <span className=" sm:2xl text-left font-Chakra-Regular text-lg font-bold text-custom-red">

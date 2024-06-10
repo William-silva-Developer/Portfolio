@@ -3,24 +3,25 @@
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
 import GitHub from "@/public/GitHub1.svg";
+import { Button } from "./ui/button";
 
 export function Footer() {
   return (
-    <footer className="flex h-[321px] w-full flex-col bg-slate-800">
+    <footer className="mt-6 flex h-[200px] w-full flex-col bg-slate-900">
       <div className="flex h-full items-center justify-between bg-transparent px-10">
-        <div>
-          <span className="font-Chakra-SemiBold text-2xl text-custom-red">
+        <div className="flex">
+          <span className="font-Chakra-SemiBold text-lg text-custom-red">
             {"{WS"}
           </span>
-          <span className="font-Chakra-SemiBold text-2xl text-custom-red">
+          <span className="font-Chakra-SemiBold text-lg text-custom-red">
             {"} "}
           </span>
-          <span className=" font-Chakra-SemiBold text-2xl text-white">
+          <span className=" font-Chakra-SemiBold text-lg text-white">
             William
           </span>
         </div>
-
-        <div className="flex items-center justify-between md:grid md:grid-cols-2 md:gap-2  lg:flex-row lg:gap-8 xl:flex-row xl:gap-8">
+        {/*NAVBAR */}
+        <div className="invisible mx-4 hidden items-center gap-3 md:visible md:flex">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Inicio
           </span>
@@ -37,31 +38,36 @@ export function Footer() {
             Contatos
           </span>
         </div>
+        {/*ICONES */}
         <div className="flex flex-row gap-2 ">
+          <a
+            className="h-6 w-6 "
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/William-silva-Developer"
+          >
+            <Image
+              alt="Logo do GitHub"
+              src={GitHub}
+              sizes="100%"
+              quality={100}
+              objectFit="contain"
+              className="cursor-pointer hover:animate-bounce"
+            />
+          </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/william-desenvolvedor/"
-            className="cursor-pointer hover:animate-bounce hover:rounded-full hover:bg-cyan-700 hover:p-1 "
+            className="cursor-pointer hover:animate-bounce"
           >
             <Linkedin size={24} color="#000" />
-          </a>
-          <a href="https://github.com/William-silva-Developer">
-            <Image
-              alt="Logo do GitHub"
-              src={GitHub}
-              width={24}
-              height={24}
-              quality={100}
-              objectFit="contain"
-              className="cursor-pointer hover:animate-bounce hover:rounded-full"
-            />
           </a>
         </div>
       </div>
       <div className="flex h-full items-start justify-center border-t-2 border-t-zinc-400 bg-transparent px-10 pt-4">
         <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-          © 2023{" "}
+          © 2024{" "}
           <a
             href="https://www.linkedin.com/in/william-desenvolvedor/"
             className="hover:underline"
