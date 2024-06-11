@@ -5,33 +5,37 @@ import { ChevronRight } from "lucide-react";
 
 import Image from "next/image";
 
-import foto from "@/public/project.jpg";
-
 const projects = [
   {
-    title: "Projeto 1",
-    description: "Descrição do Projeto 1.",
-    link: "#",
+    title: "Barber Pro",
+    description:
+      "Landing Page desenvolvido em uma das live do Sujeito Programador. Nele usamos: HTML, CSS e JavaScript",
+    link: "https://barber-hair.vercel.app/",
+    image: require("@/public/barber.png"),
   },
   {
     title: "Projeto 2",
     description: "Descrição do Projeto 2.",
     link: "#",
+    image: require("@/public/barber.png"),
   },
   {
     title: "Projeto 3",
     description: "Descrição do Projeto 2.",
     link: "#",
+    image: require("@/public/barber.png"),
   },
   {
     title: "Projeto 4",
     description: "Descrição do Projeto 2.",
     link: "#",
+    image: require("@/public/barber.png"),
   },
   {
     title: "Projeto 5",
     description: "Descrição do Projeto 2.",
     link: "#",
+    image: require("@/public/barber.png"),
   },
 ];
 
@@ -86,7 +90,7 @@ function Projects() {
                 alt="Imagem do projeto"
                 layout="responsive"
                 sizes="100%"
-                src={foto}
+                src={project?.image}
                 quality={100}
               />
             </div>

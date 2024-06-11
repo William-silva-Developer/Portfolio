@@ -67,14 +67,14 @@ export function Footer() {
       </div>
       <div className="flex h-full items-start justify-center border-t-2 border-t-zinc-400 bg-transparent px-10 pt-4">
         <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-          © 2024{" "}
+          Copyright 2024 |
           <a
             href="https://www.linkedin.com/in/william-desenvolvedor/"
             className="hover:underline"
           >
-            William
+            William -
           </a>
-          . All Rights Reserved.
+          Todos os direitos reservados.
         </span>
       </div>
     </footer>
