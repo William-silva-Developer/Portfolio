@@ -27,6 +27,10 @@ const config = {
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
+      "3xl": "1680px",
+      // => @media (min-width: 2496px) { ... }
+      "4xl": "2496px",
+      // => @media (min-width: 2496px) { ... }
     },
     container: {
       center: true,

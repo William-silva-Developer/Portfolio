@@ -12,7 +12,7 @@ import { Header } from "./_components/header";
 function Home() {
   return (
     <>
-      <div className="px-10">
+      <div className="flex flex-col px-10">
         <Header />
         <Hero />
         <About />

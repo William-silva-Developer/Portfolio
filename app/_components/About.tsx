@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about" className=" flex flex-col items-center gap-6 pt-20">
       <h2 className="mb-4  font-Chakra-Bold text-4xl font-bold text-bluish-gray sm:text-5xl md:text-6xl">
-        William silva
+        William Silva
       </h2>
       <p className="text-justify font-Chakra-Regular text-xl text-zinc-300 sm:text-2xl">
         Olá, sou um desenvolvedor frontend com experiência em criar interfaces

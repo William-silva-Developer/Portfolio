@@ -7,7 +7,7 @@ type ContainerProps = {
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
-    <div className="min-h-screen max-w-screen-2xl  bg-slate-950">
+    <div className="max-w-screen-4xl min-h-screen  bg-slate-950">
       {children}
     </div>
   );
