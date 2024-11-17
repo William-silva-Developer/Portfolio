@@ -68,7 +68,7 @@ function HardSkills() {
   return (
     <section className="mt-32 w-full  pt-4">
       <div className="fle-row flex items-center justify-center ">
-        <h2 className="mb-3 font-Chakra-SemiBold text-5xl text-bluish-gray md:text-6xl">
+        <h2 id="habilidades" className="mb-3 font-Chakra-SemiBold text-5xl text-bluish-gray md:text-6xl">
           Habilidades
         </h2>
       </div>

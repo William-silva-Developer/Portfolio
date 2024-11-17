@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 
 export function Footer() {
   return (
-    <footer className="mt-6 flex h-[200px] w-full flex-col bg-slate-900">
+    <footer id="contatos" className="mt-6 flex h-[200px] w-full flex-col bg-slate-900">
       <div className="flex h-full items-center justify-between bg-transparent px-10">
         <div className="flex">
           <span className="font-Chakra-SemiBold text-lg text-custom-red">

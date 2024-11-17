@@ -4,22 +4,7 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 
 function Header() {
-  //const [isScrolled, setIsScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 0) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  
 
   return (
     <header className="fixed  left-0 top-0 z-[999]  w-full bg-slate-900 px-8 pb-4 pt-4">
@@ -43,21 +28,31 @@ function Header() {
           <Menu color="#ffffff" size={24} />
         </Button>
         <div className="invisible hidden  items-center justify-between  gap-8  sm:visible sm:flex">
+          <a href="#">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Inicio
           </span>
+          </a>
+          <a href="#about">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Sobre
           </span>
+          </a>
+          <a href="#habilidades">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Habilidades
           </span>
+          </a>
+          <a href="#projects">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Projetos
           </span>
+          </a>
+          <a href="#contatos">
           <span className="cursor-pointer font-Chakra-Medium text-xl text-bluish-gray transition-colors duration-500 hover:border-b-4 hover:text-custom-red ">
             Contatos
           </span>
+          </a>
         </div>
       </nav>
     </header>
