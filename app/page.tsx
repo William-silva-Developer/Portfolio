@@ -1,25 +1,32 @@
 "use client";
-import React from "react";
 
-import { About } from "./_components/About";
-import { HardSkills } from "./_components/Hard-Skills";
+import { About } from "@/components/about";
+import { Contact } from "@/components/contact";
+import { Differentials } from "@/components/differentials";
+import { Experience } from "@/components/experience";
+import { Hero } from "@/components/hero";
+import { Projects } from "@/components/projects";
+import { Technologies } from "@/components/technologies";
 
-import { Hero } from "./_components/Hero";
-import Projects from "./_components/Projects";
-import { Footer } from "./_components/Footer";
-import { Header } from "./_components/header";
+import { Footer } from "@/components/footer";
+import { Navbar } from "./_components/NavBar";
 
 function Home() {
   return (
     <>
-      <div className="flex flex-col px-10">
-        <Header />
-        <Hero />
-        <About />
-        <HardSkills />
-        <Projects />
+      <div className="relative min-h-screen overflow-x-hidden">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Technologies />
+          <Projects />
+          <Experience />
+          <Differentials />
+          <Contact />
+        </main>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
