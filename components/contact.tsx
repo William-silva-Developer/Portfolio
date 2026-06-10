@@ -32,6 +32,27 @@ const channels = [
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = new FormData(e.currentTarget);
+
+    const data = {
+      name: form.get("name"),
+      email: form.get("email"),
+      subject: form.get("subject"),
+      message: form.get("message"),
+    };
+
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    setSent(true);
+  };
   return (
     <section id="contato" className="section-padding relative">
       <div aria-hidden className="absolute inset-0 -z-10">

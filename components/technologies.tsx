@@ -44,6 +44,7 @@ const groups = [
     title: "Banco de Dados",
     items: [
       { name: "PostgreSQL", icon: Database },
+      { name: "SQLServer", icon: Database },
       { name: "Supabase", icon: Cloud },
     ],
   },
