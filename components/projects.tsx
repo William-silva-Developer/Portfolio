@@ -116,7 +116,7 @@ export function Projects() {
             >
               <div
                 className={`relative overflow-hidden bg-card ${
-                  i === 0 ? "object-contain" : "aspect-16/10"
+                  i === 0 ? "object-contain" : "aspect-26/20 object-contain"
                 }`}
               >
                 <Image
@@ -125,7 +125,7 @@ export function Projects() {
                   loading="lazy"
                   width={1024}
                   height={640}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover  transition-transform duration-700 group-hover:scale-105"
                 />
 
                 <div className="bg--to-t absolute inset-0 from-background via-background/30 to-transparent" />
