@@ -10,10 +10,10 @@ export function Hero() {
     >
       {/* ambient backgrounds */}
       <div aria-hidden className="absolute inset-0 -z-10">
-        <div className="absolute -left-32 top-1/3 h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px]" />
-        <div className="absolute right-0 top-10 h-[480px] w-[480px] rounded-full bg-accent/20 blur-[140px]" />
+        <div className="h-125 w-125 absolute -left-32 top-1/3 rounded-full bg-primary/20 blur-[120px]" />
+        <div className="h-120 w-120 absolute right-0 top-10 rounded-full bg-accent/20 blur-[140px]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(56,189,248,0.08),transparent_60%)]" />
-        <div className="absolute inset-0 [background-image:linear-gradient(rgba(148,163,184,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.06)_1px,transparent_1px)] [background-size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.06)_1px,transparent_1px)]" />
       </div>
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 lg:grid-cols-2">
@@ -50,7 +50,7 @@ export function Hero() {
               <span className="gradient-text">Desenvolvedor Full Stack</span>
             </p>
             <p className="font-mono text-sm tracking-wider text-muted-foreground">
-              React Native • Expo • Next.js • TypeScript
+              React Native • Expo • Next.js • TypeScript • Spring Boot
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export function Hero() {
           <div className="flex flex-wrap gap-3 pt-2">
             <a
               href="#projetos"
-              className="glow-primary group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary to-secondary px-6 py-3 font-semibold text-primary-foreground transition-transform hover:scale-[1.02]"
+              className="glow-primary bg-linear-to-r group inline-flex items-center gap-2 rounded-xl from-primary to-secondary px-6 py-3 font-semibold text-primary-foreground transition-transform hover:scale-[1.02]"
             >
               <Sparkles className="h-4 w-4" /> Ver Projetos
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -91,7 +91,7 @@ export function Hero() {
               height={1280}
               className="h-auto w-full"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-accent/10" />
+            <div className="bg-linear-to-tr pointer-events-none absolute inset-0 from-background/40 via-transparent to-accent/10" />
           </div>
           <div className="glass-card absolute -bottom-4 -left-4 flex items-center gap-3 rounded-xl px-4 py-3 text-sm">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-400" />

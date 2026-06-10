@@ -9,12 +9,14 @@ import { Projects } from "@/components/projects";
 import { Technologies } from "@/components/technologies";
 
 import { Footer } from "@/components/footer";
+import { Container } from "./_components/Container";
 import { Navbar } from "./_components/NavBar";
 
 function Home() {
   return (
     <>
-      <div className="relative min-h-screen overflow-x-hidden">
+      <Container>
+        {/* <div className="relative min-h-screen overflow-x-hidden"> */}
         <Navbar />
         <main>
           <Hero />
@@ -26,7 +28,8 @@ function Home() {
           <Contact />
         </main>
         <Footer />
-      </div>
+      </Container>
+      {/* </div> */}
     </>
   );
 }

@@ -35,7 +35,7 @@ export function Contact() {
   return (
     <section id="contato" className="section-padding relative">
       <div aria-hidden className="absolute inset-0 -z-10">
-        <div className="absolute bottom-0 left-1/2 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-primary/15 blur-[150px]" />
+        <div className="h-100 w-150 absolute bottom-0 left-1/2 -translate-x-1/2 rounded-full bg-primary/15 blur-[150px]" />
       </div>
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader
@@ -58,7 +58,7 @@ export function Contact() {
                 transition={{ duration: 0.4, delay: i * 0.06 }}
                 className="glass-card hover:bg-card-hover/40 group flex items-center gap-4 rounded-xl p-4 transition-all hover:border-primary/40"
               >
-                <span className="grid h-11 w-11 place-items-center rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 text-primary transition-transform group-hover:scale-110">
+                <span className="bg-linear-to-br grid h-11 w-11 place-items-center rounded-lg from-primary/20 to-accent/20 text-primary transition-transform group-hover:scale-110">
                   <c.icon className="h-5 w-5" />
                 </span>
                 <div className="min-w-0 flex-1">
@@ -110,7 +110,7 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="glow-primary inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-secondary px-6 py-3.5 font-semibold text-primary-foreground transition-transform hover:scale-[1.01]"
+              className="glow-primary bg-linear-to-r inline-flex w-full items-center justify-center gap-2 rounded-xl from-primary to-secondary px-6 py-3.5 font-semibold text-primary-foreground transition-transform hover:scale-[1.01]"
             >
               <Send className="h-4 w-4" />
               {sent ? "Mensagem enviada ✓" : "Enviar Mensagem"}
