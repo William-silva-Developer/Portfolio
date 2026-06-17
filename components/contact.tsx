@@ -31,27 +31,53 @@ const channels = [
 ];
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = new FormData(e.currentTarget);
+    const form = e.currentTarget; // 👈 salva aqui ANTES do async
 
-    const data = {
-      name: form.get("name"),
-      email: form.get("email"),
-      subject: form.get("subject"),
-      message: form.get("message"),
-    };
+    setError("");
+    setSuccess(false);
+    setLoading(true);
 
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    try {
+      const data = new FormData(form);
 
-    setSent(true);
+      const payload = {
+        name: data.get("name"),
+        email: data.get("email"),
+        subject: data.get("subject"),
+        message: data.get("message"),
+      };
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Erro ao enviar");
+      }
+
+      setSuccess(true);
+
+      form.reset(); // 👈 agora seguro
+
+      setSuccess(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Erro inesperado");
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <section id="contato" className="section-padding relative">
@@ -97,11 +123,7 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-              setTimeout(() => setSent(false), 4000);
-            }}
+            onSubmit={handleSubmit}
             className="glass-card space-y-4 rounded-3xl p-6 md:p-8 lg:col-span-3"
           >
             <div className="grid gap-4 sm:grid-cols-2">
@@ -123,18 +145,32 @@ export function Contact() {
                 Mensagem
               </label>
               <textarea
+                name="message"
                 required
                 rows={5}
                 placeholder="Conte um pouco sobre seu projeto..."
                 className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary/60 focus:bg-white/[0.07]"
               />
             </div>
+            {success && (
+              <div className="rounded-xl border border-green-500/20 bg-green-500/10 p-3 text-sm text-green-400">
+                Mensagem enviada com sucesso. Responderei em breve.
+              </div>
+            )}
+
+            {error && (
+              <div className="rounded-xl border border-red-500/20 bg-red-500/10 p-3 text-sm text-red-400">
+                {error}
+              </div>
+            )}
             <button
               type="submit"
-              className="glow-primary bg-linear-to-r inline-flex w-full items-center justify-center gap-2 rounded-xl from-primary to-secondary px-6 py-3.5 font-semibold text-primary-foreground transition-transform hover:scale-[1.01]"
+              disabled={loading}
+              className="glow-primary bg-linear-to-r inline-flex w-full items-center justify-center gap-2 rounded-xl from-primary to-secondary px-6 py-3.5 font-semibold text-primary-foreground transition-transform hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
             >
               <Send className="h-4 w-4" />
-              {sent ? "Mensagem enviada ✓" : "Enviar Mensagem"}
+
+              {loading ? "Enviando..." : "Enviar Mensagem"}
             </button>
           </motion.form>
         </div>
