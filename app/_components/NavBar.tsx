@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2 } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const links = [
   { label: "Sobre", href: "#sobre" },
@@ -26,10 +27,12 @@ export function Navbar() {
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent">
               <Code2 className="h-4 w-4 text-background" />
             </span>
+
             <span className="text-foreground">
               dev<span className="gradient-text">.portfolio</span>
             </span>
           </a>
+
           <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
             {links.map((l) => (
               <a
@@ -41,12 +44,35 @@ export function Navbar() {
               </a>
             ))}
           </nav>
-          <a
-            href="#contato"
-            className="rounded-lg border border-white/10 bg-foreground/5 px-4 py-2 text-sm font-medium transition-colors hover:bg-foreground/10"
-          >
-            Contratar
-          </a>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="https://github.com/William-silva-Developer"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              <FaGithub size={18} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/william-desenvolvedor"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              <FaLinkedin size={18} />
+            </a>
+
+            <a
+              href="#contato"
+              className="rounded-lg border border-white/10 bg-foreground/5 px-4 py-2 text-sm font-medium transition-colors hover:bg-foreground/10"
+            >
+              Contratar
+            </a>
+          </div>
         </div>
       </div>
     </motion.header>

@@ -60,6 +60,28 @@ export function Hero() {
             experiência do usuário.
           </p>
 
+          {/* <div className="flex items-center gap-3">
+            <a
+              href="https://github.com/William-silva-Developer"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-all hover:border-primary/40 hover:text-primary"
+            >
+              <FaGithub size={16} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/william-desenvolvedor/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-all hover:border-primary/40 hover:text-primary"
+            >
+              <FaLinkedin size={16} />
+            </a>
+          </div> */}
+
           <div className="flex flex-wrap gap-3 pt-2">
             <a
               href="#projetos"
